@@ -62,14 +62,14 @@ export default function Page() {
   }
 
   return (
-    <main className="portfolio-shell min-h-screen overflow-hidden bg-white text-[#17221d]">
+    <main className="portfolio-shell site-shell min-h-screen overflow-hidden bg-white text-[#17221d]">
       <section id="top" className="mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-40 lg:grid-cols-[1.15fr_.85fr] lg:items-end lg:px-10 lg:pb-32 lg:pt-52">
         <div>
           <div className="mb-8 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-[#e25b38]"><span className="size-2 rounded-full bg-[#e25b38]" /> Available for select projects</div>
-          <h1 className="max-w-4xl text-[clamp(3.5rem,9vw,8.8rem)] font-medium leading-[.88] tracking-[-.075em]">Building<br /><em className="font-serif font-normal">useful</em> things<br />for curious people<span className="text-[#e25b38]">.</span></h1>
+          <h1 className="max-w-4xl text-[clamp(3.5rem,9vw,8.8rem)] font-medium leading-[.88] tracking-[-.075em]">Freelance<br /><em className="font-serif font-normal">software</em> &amp; ML<br />for curious teams<span className="text-[#e25b38]">.</span></h1>
         </div>
         <div className="max-w-sm pb-2 lg:justify-self-end">
-          <p className="text-xl leading-8 text-[#17221d]/70">Hi, I&apos;m Rohith — a software & ML developer based in India. I care about the space where thoughtful design meets useful technology.</p>
+          <p className="text-xl leading-8 text-[#17221d]/70">Hi, I&apos;m Rohith — a freelance software &amp; ML developer based in India. I help founders and teams turn ambitious ideas into calm, capable digital products.</p>
           <div className="mt-8 flex flex-wrap items-center gap-5"><a href="/works" className="inline-flex items-center gap-2 border-b border-[#17221d] pb-1 text-sm font-medium">See my work <ArrowUpRight size={15} /></a><a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-[#17221d] px-4 py-2 text-xs text-[#f7f7f2] transition-transform hover:-translate-y-0.5">Start a conversation</a><span className="font-mono text-xs text-[#17221d]/50">01 — 04</span></div>
         </div>
       </section>

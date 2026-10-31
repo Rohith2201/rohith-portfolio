@@ -197,6 +197,15 @@
     color: #fffaf4 !important;
   }
 
+  html.dark .site-shell [class*="text-[#f7f7f2]"] {
+    color: #fffaf4 !important;
+  }
+
+  html.dark .site-shell input,
+  html.dark .site-shell textarea {
+    color: #fffaf4;
+  }
+
   html.dark .site-shell [class*="border-[#17221d]"] {
     border-color: rgb(255 250 244 / 16%) !important;
   }
