@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: 'Rohith — Software & ML Developer',
   description: 'Rohith Juluru is a software and ML developer building useful things for curious people.',
   generator: 'v0.app',
+  metadataBase: new URL('https://rohith.xyz'),
+  alternates: { canonical: '/' },
+  openGraph: { title: 'Rohith — Software & ML Developer', description: 'Rohith Juluru builds useful digital products, AI tools, and thoughtful interfaces.', url: 'https://rohith.xyz', siteName: 'rohith.xyz', type: 'website' },
+  twitter: { card: 'summary_large_image', title: 'Rohith — Software & ML Developer', description: 'Useful things for curious people.' },
   icons: {
     icon: [
       {
