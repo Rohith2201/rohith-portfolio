@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowUpRight, Clock } from 'lucide-react'
 import { blogPosts } from '@/lib/content'
+import { SiteCta } from '@/components/site-cta'
 
 export const metadata = {
   title: 'Writing — Rohith Juluru',
@@ -39,6 +40,7 @@ export default function BlogsPage() {
           ))}
         </div>
       </section>
+      <SiteCta />
       <footer className="mx-auto flex max-w-7xl items-center justify-between px-6 py-8 text-sm lg:px-10"><p className="font-mono text-xs text-[#17221d]/50">© 2024 Rohith Juluru</p><a href="https://github.com/Rohith2201" target="_blank" rel="noreferrer" className="font-mono text-xs hover:text-[#e25b38]">GitHub ↗</a></footer>
     </main>
   )

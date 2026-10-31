@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { ArrowLeft, ArrowUpRight, Clock } from 'lucide-react'
 import { blogPosts } from '@/lib/content'
+import { SiteCta } from '@/components/site-cta'
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }))
@@ -25,9 +26,10 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
           <h1 className="mt-8 max-w-4xl text-[clamp(3.5rem,8vw,7.5rem)] font-medium leading-[.9] tracking-[-.075em]">{post.title}<span className="text-[#e25b38]">.</span></h1>
           <p className="mt-8 max-w-2xl text-xl leading-8 text-[#17221d]/65">{post.excerpt}</p>
         </header>
-        <div className="mx-auto max-w-7xl px-6 lg:px-10"><img src={post.cover} alt="" className="aspect-[2/1] w-full rounded-sm object-cover" /></div>
-        <div className="mx-auto grid max-w-5xl gap-12 px-6 py-20 lg:grid-cols-[.35fr_.65fr] lg:px-10 lg:py-28"><aside className="font-mono text-xs uppercase tracking-[0.16em] text-[#e25b38]">/ The notes</aside><div className="flex flex-col gap-8 text-xl leading-9 text-[#17221d]/80 lg:text-2xl">{post.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}<div className="mt-8 border-t border-[#17221d]/15 pt-8 text-sm leading-6 text-[#17221d]/60"><a href="https://github.com/Rohith2201" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-[#17221d] hover:text-[#e25b38]">More from Rohith <ArrowUpRight size={15} /></a></div></div></div>
+        <figure className="mx-auto max-w-7xl px-6 lg:px-10"><img src={post.cover} alt={`${post.title} cover`} className="aspect-[2/1] w-full rounded-sm object-cover" /><figcaption className="mt-3 font-mono text-xs uppercase tracking-[0.12em] text-[#17221d]/50">{post.title} — cover image</figcaption></figure>
+        <div className="mx-auto grid max-w-5xl gap-12 px-6 py-20 lg:grid-cols-[.35fr_.65fr] lg:px-10 lg:py-28"><aside className="font-mono text-xs uppercase tracking-[0.16em] text-[#e25b38]">/ The notes</aside><div className="flex flex-col gap-8 text-xl leading-9 text-[#17221d]/80 lg:text-2xl">{post.body.slice(0, 1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}<figure className="py-4"><img src={post.inlineImage} alt="Supporting article visual" className="aspect-[1.5/1] w-full rounded-sm object-cover" /><figcaption className="mt-3 font-mono text-xs uppercase tracking-[0.12em] text-[#17221d]/50">{post.imageCaption}</figcaption></figure>{post.body.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}<div className="mt-8 border-t border-[#17221d]/15 pt-8 text-sm leading-6 text-[#17221d]/60"><a href="https://github.com/Rohith2201" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-[#17221d] hover:text-[#e25b38]">More from Rohith <ArrowUpRight size={15} /></a></div></div></div>
       </article>
+      <SiteCta />
     </main>
   )
 }
