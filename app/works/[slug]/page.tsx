@@ -21,7 +21,7 @@ export default async function WorkDetailPage({ params }: { params: Promise<{ slu
   if (!project) notFound()
 
   return (
-    <main className="min-h-screen bg-[#f7f7f2] text-[#17221d]">
+    <main className="site-shell min-h-screen bg-[#f7f7f2] text-[#17221d]">
       <header className="border-b border-[#17221d]/10"><div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10"><a href="/" className="font-mono text-sm font-semibold tracking-tight">rohith<span className="text-[#e25b38]">.</span>xyz</a><a href="/works" className="inline-flex items-center gap-2 text-sm hover:text-[#e25b38]"><ArrowLeft size={16} /> All work</a></div></header>
       <article>
         <header className="mx-auto max-w-7xl px-6 pb-16 pt-24 lg:px-10 lg:pb-20 lg:pt-32"><Breadcrumbs current={project.title} /><div className="mt-10 font-mono text-xs uppercase tracking-[0.16em] text-[#e25b38]">{project.type} / {project.year}</div><h1 className="mt-8 max-w-5xl text-[clamp(4rem,11vw,10rem)] font-medium leading-[.82] tracking-[-.08em]">{project.title}<span className="text-[#e25b38]">.</span></h1><p className="mt-10 max-w-2xl text-xl leading-8 text-[#17221d]/65">{project.description}</p><div className="mt-8 flex flex-wrap gap-2">{project.tags.map((tag) => <span key={tag} className="rounded-full border border-[#17221d]/15 px-3 py-1 font-mono text-[10px] uppercase tracking-wider">{tag}</span>)}</div></header>

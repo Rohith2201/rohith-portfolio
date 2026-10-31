@@ -4,7 +4,7 @@ import { SiteCta } from '@/components/site-cta'
 
 export default function WorksPage() {
   return (
-    <main className="min-h-screen bg-[#f7f7f2] text-[#17221d]">
+    <main className="site-shell min-h-screen bg-[#f7f7f2] text-[#17221d]">
       <header className="border-b border-[#17221d]/10">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
           <a href="/" className="font-mono text-sm font-semibold tracking-tight">rohith<span className="text-[#e25b38]">.</span>xyz</a>

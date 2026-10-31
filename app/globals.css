@@ -188,6 +188,28 @@
     color: #f0784d !important;
   }
 
+  html.dark .site-shell {
+    background: #11100f !important;
+    color: #fffaf4 !important;
+  }
+
+  html.dark .site-shell [class*="text-[#17221d]"] {
+    color: #fffaf4 !important;
+  }
+
+  html.dark .site-shell [class*="border-[#17221d]"] {
+    border-color: rgb(255 250 244 / 16%) !important;
+  }
+
+  html.dark .site-shell header,
+  html.dark .site-shell footer,
+  html.dark .site-shell section {
+    border-color: rgb(255 250 244 / 16%);
+  }
+
+  html.dark .site-shell a:hover {
+    color: #f0784d !important;
+  }
 
   ::selection {
     background: #e25b38;
