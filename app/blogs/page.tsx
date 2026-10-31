@@ -29,6 +29,7 @@ export default function BlogsPage() {
             <a href={`/blogs/${post.slug}`} key={post.slug} className="group grid gap-8 border-b border-[#17221d]/15 py-10 md:grid-cols-[.12fr_.35fr_.53fr] md:items-center lg:py-14">
               <span className="font-mono text-sm text-[#e25b38]">0{index + 1}</span>
               <div>
+              <br>
                 <div className="flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-[0.16em] text-[#e25b38]"><span>{post.category}</span><span className="text-[#17221d]/30">/</span><span className="text-[#17221d]/45">{post.date}</span><span className="inline-flex items-center gap-1 text-[#17221d]/45"><Clock size={12} /> {post.readTime}</span></div>
                 <h2 className="mt-4 text-3xl tracking-[-.045em] transition-colors group-hover:text-[#e25b38] lg:text-4xl">{post.title}</h2>
               </div>
