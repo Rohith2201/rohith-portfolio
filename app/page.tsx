@@ -66,7 +66,7 @@ export default function Page() {
       <section id="top" className="mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-40 lg:grid-cols-[1.15fr_.85fr] lg:items-end lg:px-10 lg:pb-32 lg:pt-52">
         <div>
           <div className="mb-8 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-[#e25b38]"><span className="size-2 rounded-full bg-[#e25b38]" /> Available for select projects</div>
-          <h1 className="max-w-4xl text-[clamp(3.5rem,9vw,8.8rem)] font-medium leading-[.88] tracking-[-.075em]">Building<br /><em className="font-serif py-1font-normal">useful</em> things<br />for curious people<span className="text-[#e25b38]">.</span></h1>
+          <h1 className="max-w-4xl text-[clamp(3.5rem,9vw,8.8rem)] font-medium leading-[.88] tracking-[-.075em]">Building<br /><em className="font-serif py-1 font-normal">useful</em> things<br />for curious people<span className="text-[#e25b38]">.</span></h1>
         </div>
         <div className="max-w-sm pb-2 lg:justify-self-end">
           <p className="text-xl leading-8 text-[#17221d]/70">Hi, I&apos;m Rohith — a freelance software &amp; ML developer based in India. I help founders and teams turn ambitious ideas into calm, capable digital products.</p>
