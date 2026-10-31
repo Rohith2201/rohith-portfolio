@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowUpRight, Clock } from 'lucide-react'
 import { blogPosts } from '@/lib/content'
+import { SiteCta } from '@/components/site-cta'
 
 export const metadata = {
   title: 'Writing — Rohith Juluru',
@@ -8,7 +9,7 @@ export const metadata = {
 
 export default function BlogsPage() {
   return (
-    <main className="min-h-screen bg-[#f7f7f2] text-[#17221d]">
+    <main className="site-shell min-h-screen bg-[#f7f7f2] text-[#17221d]">
       <header className="border-b border-[#17221d]/10">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
           <a href="/" className="font-mono text-sm font-semibold tracking-tight">rohith<span className="text-[#e25b38]">.</span>xyz</a>
@@ -28,7 +29,8 @@ export default function BlogsPage() {
             <a href={`/blogs/${post.slug}`} key={post.slug} className="group grid gap-8 border-b border-[#17221d]/15 py-10 md:grid-cols-[.12fr_.35fr_.53fr] md:items-center lg:py-14">
               <span className="font-mono text-sm text-[#e25b38]">0{index + 1}</span>
               <div>
-                <div className="flex flex-wrap items-center gap-3 font-mono text-[10px] uppercase tracking-[0.16em] text-[#e25b38]"><span>{post.category}</span><span className="text-[#17221d]/30">/</span><span className="text-[#17221d]/45">{post.date}</span><span className="inline-flex items-center gap-1 text-[#17221d]/45"><Clock size={12} /> {post.readTime}</span></div>
+          
+                <div className="flex items-center justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.16em] text-[#e25b38]"><div className="flex flex-wrap items-center gap-3"><span>{post.category}</span><span className="text-[#17221d]/30">/</span><span className="text-[#17221d]/45">{post.date}</span></div><span className="inline-flex shrink-0 items-center gap-1 text-[#17221d]/45"><Clock size={12} /> {post.readTime}</span></div>
                 <h2 className="mt-4 text-3xl tracking-[-.045em] transition-colors group-hover:text-[#e25b38] lg:text-4xl">{post.title}</h2>
               </div>
               <div className="grid gap-5 md:grid-cols-[1fr_auto] md:items-center">
@@ -39,6 +41,7 @@ export default function BlogsPage() {
           ))}
         </div>
       </section>
+      <SiteCta />
       <footer className="mx-auto flex max-w-7xl items-center justify-between px-6 py-8 text-sm lg:px-10"><p className="font-mono text-xs text-[#17221d]/50">© 2024 Rohith Juluru</p><a href="https://github.com/Rohith2201" target="_blank" rel="noreferrer" className="font-mono text-xs hover:text-[#e25b38]">GitHub ↗</a></footer>
     </main>
   )
