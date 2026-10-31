@@ -166,6 +166,29 @@
     scroll-behavior: smooth;
   }
 
+  html.dark body {
+    background: #11100f;
+    color: #fffaf4;
+  }
+
+  html.dark .portfolio-shell {
+    background: #11100f !important;
+    color: #fffaf4 !important;
+  }
+
+  html.dark .portfolio-shell section,
+  html.dark .portfolio-shell header,
+  html.dark .portfolio-shell footer {
+    background-color: #11100f !important;
+    color: #fffaf4;
+    border-color: rgb(255 250 244 / 16%);
+  }
+
+  html.dark .portfolio-shell a:hover {
+    color: #f0784d !important;
+  }
+
+
   ::selection {
     background: #e25b38;
     color: #f7f7f2;
