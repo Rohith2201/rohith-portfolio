@@ -1,7 +1,164 @@
 [
-  {"slug":"building-in-public","title":"The quiet power of building in public","category":"Notes","date":"June 14, 2024","readTime":"4 min read","excerpt":"What changes when you share the process, not just the polished result.","cover":"https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1800&q=85","inlineImage":"https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1400&q=85","imageCaption":"A working archive is often more useful than a polished announcement.","body":["The internet rewards finished things. Launch posts, tidy case studies, the neat version of a long and complicated process. But most of the useful thinking happens before the reveal.","Building in public has become a way to make that thinking visible. It is not about turning every work session into content. It is about leaving enough of a trail that other people can learn from the decisions, mistakes, and small discoveries along the way.","For me, the best kind of sharing is specific and honest: a screenshot of an awkward first pass, a short note about a technical trade-off, or a post-mortem that says what I would do differently."]},
-  {"slug":"shipping-ai-products","title":"What I learned shipping my first AI product","category":"AI product development","date":"April 2, 2024","readTime":"6 min read","excerpt":"Useful AI products start with a clear job, trustworthy UX, and a feedback loop—not an impressive demo.","cover":"https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1800&q=85","inlineImage":"https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1400&q=85","imageCaption":"Good AI products make trust visible in the interface.","body":["The first prototype was impressive for about five minutes. It could summarize, brainstorm, and answer questions. Then the novelty wore off and the real question arrived: what job does this actually help someone do?","The strongest lesson was to narrow the product until the value became obvious. A focused workflow with a fast feedback loop beat a general assistant with a longer feature list every time.","The technical pieces matter, but trust matters more. Good defaults, visible sources, graceful failure states, and an interface that lets people stay in control are the difference between a model demo and a product people return to."]},
-  {"slug":"better-interfaces","title":"A practical guide to better interfaces","category":"Product design","date":"January 18, 2024","readTime":"5 min read","excerpt":"A few small principles I return to whenever a screen feels almost right.","cover":"https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1800&q=85","inlineImage":"https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1400&q=85","imageCaption":"Hierarchy gives every interface a clear point of view.","body":["Good interfaces rarely announce themselves. They reduce the amount of thinking required to move through a task, and they make the next useful action feel natural.","Start with hierarchy. If everything is loud, nothing is clear. Give the primary action space, keep supporting information close to the thing it explains, and let typography do more of the work than decoration.","Then test the edges: empty states, long names, slow networks, keyboard navigation, and the moment after an action succeeds."]},
-  {"slug":"ai-agents-in-production","title":"A practical guide to AI agents in production","category":"AI engineering","date":"September 12, 2024","readTime":"8 min read","excerpt":"How to design reliable AI agents with tools, guardrails, evaluation, and human control.","cover":"https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1800&q=85","inlineImage":"https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85","imageCaption":"Production agents need observable steps, not just fluent answers.","body":["AI agents are most useful when they complete a bounded workflow instead of pretending to be universal experts. Start with the user outcome, map the decisions the agent must make, and keep each tool call explicit.","Reliability comes from the system around the model: typed inputs, permission checks, retries, timeouts, structured outputs, and evaluations built from real tasks. A polished chat surface cannot compensate for invisible failure modes.","The best agent UX keeps people informed. Show what the agent is doing, make approvals meaningful, and provide a clear recovery path when a tool or model is uncertain."]},
-  {"slug":"rag-search-quality","title":"Improving RAG search quality for AI applications","category":"AI systems","date":"October 3, 2024","readTime":"7 min read","excerpt":"A practical framework for better retrieval augmented generation: chunking, metadata, reranking, and evaluation.","cover":"https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=85","inlineImage":"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=85","imageCaption":"Good retrieval gives a language model the right context at the right time.","body":["Most RAG problems are retrieval problems before they are generation problems. If the right source never reaches the context window, a stronger model will not reliably fix the answer.","Start with clean documents, useful metadata, and chunks that preserve meaning. Measure recall with a small set of questions from real users, then add hybrid search or reranking only when the evaluation shows a gap.","Finally, design for citation and correction. Let people inspect the source behind an answer, report a bad result, and improve the corpus over time."]}
+  {
+    "slug": "building-in-public",
+    "title": "The quiet power of building in public",
+    "category": "Notes",
+    "date": "June 14, 2024",
+    "readTime": "4 min read",
+    "excerpt": "What changes when you share the process, not just the polished result.",
+    "cover": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1800&q=85",
+    "inlineImage": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1400&q=85",
+    "imageCaption": "A working archive is often more useful than a polished announcement.",
+    "body": [
+      "The internet rewards finished things. Launch posts, tidy case studies, the neat version of a long and complicated process. But most of the useful thinking happens before the reveal.",
+      "Building in public has become a way to make that thinking visible. It is not about turning every work session into content. It is about leaving enough of a trail that other people can learn from the decisions, mistakes, and small discoveries along the way.",
+      "For me, the best kind of sharing is specific and honest: a screenshot of an awkward first pass, a short note about a technical trade-off, or a post-mortem that says what I would do differently."
+    ]
+  },
+  {
+    "slug": "shipping-ai-products",
+    "title": "What I learned shipping my first AI product",
+    "category": "AI product development",
+    "date": "April 2, 2024",
+    "readTime": "6 min read",
+    "excerpt": "Useful AI products start with a clear job, trustworthy UX, and a feedback loop—not an impressive demo.",
+    "cover": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1800&q=85",
+    "inlineImage": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1400&q=85",
+    "imageCaption": "Good AI products make trust visible in the interface.",
+    "body": [
+      "The first prototype was impressive for about five minutes. It could summarize, brainstorm, and answer questions. Then the novelty wore off and the real question arrived: what job does this actually help someone do?",
+      "The strongest lesson was to narrow the product until the value became obvious. A focused workflow with a fast feedback loop beat a general assistant with a longer feature list every time.",
+      "The technical pieces matter, but trust matters more. Good defaults, visible sources, graceful failure states, and an interface that lets people stay in control are the difference between a model demo and a product people return to."
+    ]
+  },
+  {
+    "slug": "better-interfaces",
+    "title": "A practical guide to better interfaces",
+    "category": "Product design",
+    "date": "January 18, 2024",
+    "readTime": "5 min read",
+    "excerpt": "A few small principles I return to whenever a screen feels almost right.",
+    "cover": "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1800&q=85",
+    "inlineImage": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1400&q=85",
+    "imageCaption": "Hierarchy gives every interface a clear point of view.",
+    "body": [
+      "Good interfaces rarely announce themselves. They reduce the amount of thinking required to move through a task, and they make the next useful action feel natural.",
+      "Start with hierarchy. If everything is loud, nothing is clear. Give the primary action space, keep supporting information close to the thing it explains, and let typography do more of the work than decoration.",
+      "Then test the edges: empty states, long names, slow networks, keyboard navigation, and the moment after an action succeeds."
+    ]
+  },
+  {
+    "slug": "ai-agents-in-production",
+    "title": "A practical guide to AI agents in production",
+    "category": "AI engineering",
+    "date": "September 12, 2024",
+    "readTime": "8 min read",
+    "excerpt": "How to design reliable AI agents with tools, guardrails, evaluation, and human control.",
+    "cover": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1800&q=85",
+    "inlineImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85",
+    "imageCaption": "Production agents need observable steps, not just fluent answers.",
+    "body": [
+      "AI agents are most useful when they complete a bounded workflow instead of pretending to be universal experts. Start with the user outcome, map the decisions the agent must make, and keep each tool call explicit.",
+      "Reliability comes from the system around the model: typed inputs, permission checks, retries, timeouts, structured outputs, and evaluations built from real tasks. A polished chat surface cannot compensate for invisible failure modes.",
+      "The best agent UX keeps people informed. Show what the agent is doing, make approvals meaningful, and provide a clear recovery path when a tool or model is uncertain."
+    ]
+  },
+  {
+    "slug": "rag-search-quality",
+    "title": "Improving RAG search quality for AI applications",
+    "category": "AI systems",
+    "date": "October 3, 2024",
+    "readTime": "7 min read",
+    "excerpt": "A practical framework for better retrieval augmented generation: chunking, metadata, reranking, and evaluation.",
+    "cover": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=85",
+    "inlineImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=85",
+    "imageCaption": "Good retrieval gives a language model the right context at the right time.",
+    "body": [
+      "Most RAG problems are retrieval problems before they are generation problems. If the right source never reaches the context window, a stronger model will not reliably fix the answer.",
+      "Start with clean documents, useful metadata, and chunks that preserve meaning. Measure recall with a small set of questions from real users, then add hybrid search or reranking only when the evaluation shows a gap.",
+      "Finally, design for citation and correction. Let people inspect the source behind an answer, report a bad result, and improve the corpus over time."
+    ]
+  },
+    {
+    "slug": "how-i-approached-code-365",
+    "title": "Designing Code 365 Around the Learner Journey",
+    "category": "Build notes",
+    "date": "October 31, 2026",
+    "readTime": "5 min read",
+    "excerpt": "How I organized Code 365 into a clear progression from learning fundamentals to practicing skills and preparing for interviews.",
+    "cover": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=85",
+    "inlineImage": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=85",
+    "imageCaption": "The product structure connects learning paths, practice, and interview preparation.",
+    "body": [
+      "Code 365 has grown into a broad learning and interview preparation platform. Its sitemap lists more than 150 pages, 500 problems, 20 companies, and 30 topics. At this scale, the central product question is not only what to offer, but how to help each learner decide where to begin and what to do next."
+    ],
+    "content": [
+      {
+        "type": "heading",
+        "text": "Start with a clear progression"
+      },
+      {
+        "type": "paragraph",
+        "text": "I organized the learning experience around three stages: Foundations, Problem Solving, and Interview Mastery. Foundations covers the building blocks, including arrays, strings, linked lists, stacks, queues, and basic sorting. Problem Solving builds toward trees, graphs, dynamic programming, and other advanced techniques. Interview Mastery then focuses on system design and challenging interview topics."
+      },
+      {
+        "type": "paragraph",
+        "text": "This progression gives the problem catalog context. Learners can work from fundamentals toward more advanced material instead of facing a flat list of topics with no suggested order."
+      },
+      {
+        "type": "heading",
+        "text": "Make practice part of the learning path"
+      },
+      {
+        "type": "paragraph",
+        "text": "A learning path becomes useful when it leads directly to practice. Code 365 connects its curricula to a problem library, a daily challenge, SQL problems, and an online code editor. The algorithm visualizer gives learners a way to inspect how algorithms work, while the Git visualizer turns commands into an interactive exercise."
+      },
+      {
+        "type": "paragraph",
+        "text": "The My Problems area and progress features help learners keep track of what they have completed. Together, these tools create a loop: choose a topic, learn the idea, apply it, and see what remains."
+      },
+      {
+        "type": "image",
+        "src": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=85",
+        "alt": "Learners working together around a laptop.",
+        "caption": "The product structure connects learning paths, practice, and interview preparation."
+      },
+      {
+        "type": "heading",
+        "text": "Connect practice to interview preparation"
+      },
+      {
+        "type": "paragraph",
+        "text": "Interview preparation is integrated into the same experience. Company pages organize questions around employers such as Google, Microsoft, Amazon, Meta, Apple, Netflix, and IBM. Interview guides and experiences provide context, while mock and peer interviews offer ways to rehearse."
+      },
+      {
+        "type": "paragraph",
+        "text": "This structure links general skill building to a concrete goal. A learner can move from a topic or problem toward the kind of preparation they need for a particular interview."
+      },
+      {
+        "type": "heading",
+        "text": "Support consistency and long-term progress"
+      },
+      {
+        "type": "paragraph",
+        "text": "Flashcards, study plans, roadmaps, and learning resources support work between problem sessions. Profiles, statistics, achievements, and rankings make progress visible, while events and community features give learners more ways to participate."
+      },
+      {
+        "type": "paragraph",
+        "text": "These parts matter because preparation takes time. The product needs to remain useful after the first visit, helping learners return, continue a plan, and understand how their effort is adding up."
+      },
+      {
+        "type": "heading",
+        "text": "Use the sitemap as a product map"
+      },
+      {
+        "type": "paragraph",
+        "text": "I treat the sitemap as more than a list of routes. It makes the platform structure explicit and shows whether the main journey is understandable across learning paths, practice, interview resources, and progress. As the product grows, that map helps keep new features connected to the experience rather than adding them as isolated destinations."
+      },
+      {
+        "type": "paragraph",
+        "text": "That is the approach behind Code 365: organize the breadth around a learner goal, connect each stage to a useful action, and make progress easier to follow. The current product is available at code365.tech."
+      }
+    ]
+  }
 ]
