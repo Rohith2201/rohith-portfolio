@@ -73,9 +73,9 @@ export default function Page() {
           <nav className={`${menuOpen ? 'absolute left-0 right-0 top-20 flex border-b border-[#17221d]/10 bg-white p-6' : 'hidden'} flex-col gap-5 text-sm md:static md:flex md:flex-row md:items-center md:border-0 md:bg-transparent md:p-0`}>
             {['About', 'Work', 'Writing', 'Contact'].map((item) => <a key={item} href={item === 'Writing' ? '/blogs' : `#${item.toLowerCase()}`} onClick={() => setMenuOpen(false)} className="transition-colors hover:text-[#e25b38]">{item}</a>)}
           </nav>
-          <div className="hidden items-center gap-4 md:flex"><a href="#contact" className="inline-flex items-center gap-2 text-sm">Let&apos;s talk <ArrowUpRight size={16} /></a></div>
-          <ThemeToggle />
-          <button aria-label={menuOpen ? 'Close menu' : 'Open menu'} className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={21} /> : <Menu size={21} />}</button>
+          <div className="hidden items-center gap-4 md:flex"><a href="#contact" className="inline-flex items-center gap-2 text-sm">Let&apos;s talk <ArrowUpRight size={16} /></a> <ThemeToggle />
+</div>
+                    <button aria-label={menuOpen ? 'Close menu' : 'Open menu'} className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={21} /> : <Menu size={21} />}</button>
         </div>
       </header>
 
