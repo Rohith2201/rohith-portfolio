@@ -153,8 +153,8 @@ export default function Page() {
             <p className="mb-4 font-mono text-xs uppercase tracking-[0.18em] text-[#e25b38]">
               / Selected work
             </p>
-            <a href="/works">
-              <h2 className="text-5xl tracking-[-.06em] lg:text-7xl">
+            <a href="/works" className="group">
+              <h2 className="text-5xl tracking-[-.06em] transition-colors group-hover:text-[#e25b38] lg:text-7xl">
                 A few things
                 <br />
                 <em className="font-serif font-normal">I&apos;ve made.</em>
@@ -176,7 +176,7 @@ export default function Page() {
                 {work.number}
               </span>
               <div>
-                <h3 className="text-3xl tracking-[-.04em] transition-transform group-hover:translate-x-2">
+                <h3 className="text-3xl tracking-[-.04em] transition-[color,transform] group-hover:translate-x-2 group-hover:text-[#e25b38]">
                   {work.title}{" "}
                   <ArrowUpRight
                     className="inline-block opacity-0 transition-opacity group-hover:opacity-100"
@@ -192,7 +192,11 @@ export default function Page() {
                 <div
                   className={`flex h-20 w-28 items-center justify-center rounded-full ${work.accent} transition-transform group-hover:rotate-6`}
                 >
-                  <Sparkles size={25} strokeWidth={1.3} />
+                  <Sparkles
+                    size={25}
+                    strokeWidth={1.3}
+                    className="text-black"
+                  />
                 </div>
               </div>
               <div className="md:col-start-2 flex flex-wrap gap-2">
@@ -220,15 +224,20 @@ export default function Page() {
               A few teams I&apos;ve worked with
             </span>
           </div>
-          <div className="grid grid-cols-3 gap-3 sm:gap-5">
-            <div className="flex min-h-24 items-center justify-center border border-[#17221d]/15 bg-white/40 p-4 text-center font-serif text-xl italic sm:min-h-32 sm:text-3xl">
-              Northstar
+          <div className="grid grid-cols-2 gap-3 sm:gap-5">
+            <div className="flex min-h-24 items-center justify-center border border-[#17221d]/15 bg-white p-4 sm:min-h-32">
+              <img
+                src="/assets/work/chaturasolutions/logo%20.png"
+                alt="Chatura Solutions LLP logo"
+                className="h-12 w-full max-w-60 object-contain sm:h-14"
+              />
             </div>
-            <div className="flex min-h-24 items-center justify-center border border-[#17221d]/15 bg-white/40 p-4 text-center font-mono text-xs uppercase tracking-[0.2em] sm:min-h-32 sm:text-sm">
-              Craft &amp; Co.
-            </div>
-            <div className="flex min-h-24 items-center justify-center border border-[#17221d]/15 bg-white/40 p-4 text-center text-xl font-semibold tracking-[-.05em] sm:min-h-32 sm:text-3xl">
-              orbit<span className="text-[#e25b38]">.</span>
+            <div className="flex min-h-24 items-center justify-center border border-[#17221d]/15 bg-[#1d2b78] p-4 sm:min-h-32">
+              <img
+                src="/assets/work/nritupskills/logo.png"
+                alt="NRIT Upskills logo"
+                className="h-12 w-full max-w-60 object-contain sm:h-14"
+              />
             </div>
           </div>
         </div>
@@ -243,25 +252,32 @@ export default function Page() {
           </div>
           <div className="grid gap-10">
             <div className="grid gap-2 border-b border-[#17221d]/15 pb-8 sm:grid-cols-[.3fr_1fr_auto]">
-              <p className="font-mono text-xs text-[#17221d]/60">2022 — now</p>
+              <p className="font-mono text-xs text-[#17221d]/60">
+                Aug 2025 — now
+              </p>
               <div>
-                <h3 className="text-2xl">Independent developer</h3>
-                <p className="mt-2 text-[#17221d]/65">
-                  Building digital products with ambitious teams and curious
-                  founders.
-                </p>
+                <h3 className="text-2xl">Software Development Engineer</h3>
+                <p className="mt-2 text-[#17221d]/65">LTIMindtree</p>
               </div>
               <span className="font-mono text-xs text-[#e98667]">01</span>
             </div>
             <div className="grid gap-2 border-b border-[#17221d]/15 pb-8 sm:grid-cols-[.3fr_1fr_auto]">
-              <p className="font-mono text-xs text-[#17221d]/60">2021 — 22</p>
+              <p className="font-mono text-xs text-[#17221d]/60">
+                Jan 2025 — Aug 2025
+              </p>
               <div>
-                <h3 className="text-2xl">Software engineer</h3>
-                <p className="mt-2 text-[#17221d]/65">
-                  Worked across frontend, ML systems, and the spaces between.
-                </p>
+                <h3 className="text-2xl">Intern</h3>
+                <p className="mt-2 text-[#17221d]/65">Chatura Solutions</p>
               </div>
               <span className="font-mono text-xs text-[#e98667]">02</span>
+            </div>
+            <div className="grid gap-2 border-b border-[#17221d]/15 pb-8 sm:grid-cols-[.3fr_1fr_auto]">
+              <p className="font-mono text-xs text-[#17221d]/60">2022</p>
+              <div>
+                <h3 className="text-2xl">CMO</h3>
+                <p className="mt-2 text-[#17221d]/65">Appenexus</p>
+              </div>
+              <span className="font-mono text-xs text-[#e98667]">03</span>
             </div>
           </div>
         </div>
@@ -277,7 +293,7 @@ export default function Page() {
               / From the journal
             </p>
             <a href="/blogs" className="group inline-block">
-              <h2 className="mt-5 text-5xl tracking-[-.06em] lg:text-6xl">
+              <h2 className="mt-5 text-5xl tracking-[-.06em] transition-colors group-hover:text-[#e25b38] lg:text-6xl">
                 Thinking
                 <br />
                 <em className="font-serif font-normal">out loud.</em>
@@ -293,16 +309,16 @@ export default function Page() {
               <a
                 href={`/blogs/${post.slug}`}
                 key={post.title}
-                className="group grid grid-cols-[auto_1fr_auto] items-start gap-5 border-t border-[#17221d]/20 py-6"
+                className="group grid grid-cols-[auto_1fr_auto] items-start gap-5 border-t border-[#17221d]/20 py-8"
               >
-                <span className="font-mono text-xs text-[#17221d]/45">
+                <span className="font-mono text-[10px] text-[#17221d]/45">
                   {post.date}
                 </span>
                 <div>
                   <span className="font-mono text-[10px] uppercase tracking-widest text-[#e25b38]">
                     {post.category}
                   </span>
-                  <h3 className="mt-2 text-xl tracking-[-.02em] transition-colors group-hover:text-[#e25b38]">
+                  <h3 className="mt-2 text-2xl tracking-[-.02em] transition-colors group-hover:text-[#e25b38]">
                     {post.title}
                   </h3>
                 </div>
@@ -412,7 +428,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }

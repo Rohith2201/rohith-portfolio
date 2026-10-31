@@ -120,7 +120,7 @@ export default async function WorkDetailPage({
           <img
             src={project.cover}
             alt={`${project.title} overview`}
-            className="aspect-[2/1] w-full rounded-sm object-cover"
+            className={`aspect-[2/1] w-full rounded-sm ${project.slug === "code-365" ? "bg-[#d8e6df] object-contain" : project.slug === "smart-mart" ? "bg-white object-contain" : "object-cover"}`}
           />
           <figcaption className="mt-3 font-mono text-center text-xs uppercase text-[#17221d]/50">
             {project.title} — overview
@@ -149,7 +149,7 @@ export default async function WorkDetailPage({
                         src={block.src}
                         alt={block.alt}
                         loading="lazy"
-                        className="aspect-[1.5/1] w-full rounded-sm object-cover"
+                        className={`aspect-[1.5/1] w-full rounded-sm ${project.slug === "smart-mart" ? "bg-white object-contain" : "object-cover"}`}
                       />
                       <figcaption className="mt-3 font-mono text-center text-xs uppercase tracking-[0.12em] text-[#17221d]/50">
                         {block.caption}
@@ -167,7 +167,7 @@ export default async function WorkDetailPage({
                         src={project.inlineImage}
                         alt={project.imageCaption}
                         loading="lazy"
-                        className="aspect-[1.5/1] w-full rounded-sm object-cover"
+                        className={`aspect-[1.5/1] w-full rounded-sm ${project.slug === "smart-mart" ? "bg-white object-contain" : "object-cover"}`}
                       />
                       <figcaption className="mt-3 font-mono text-center text-xs uppercase tracking-[0.12em] text-[#17221d]/50">
                         {project.imageCaption}

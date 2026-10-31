@@ -6,13 +6,21 @@
     "type": "Website development",
     "description": "A food delivery service website designed to make local ordering feel fast and friendly.",
     "tags": ["HTML", "Tailwind CSS", "JavaScript"],
-    "cover": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=85",
+    "cover": "/assets/work/cheezechoice/cheezechoice.png",
     "color": "#f0d8c9",
-    "inlineImage": "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1400&q=85",
+    "inlineImage": "/assets/work/cheezechoice/home.png",
     "imageCaption": "A warm, clear interface keeps the menu and ordering flow easy to scan.",
     "body": [
       "Cheezechoice is a food delivery service website built around quick discovery and a simple path to checkout.",
       "I focused on a responsive layout, clear food categories, and lightweight interactions that help local customers order without friction."
+    ],
+    "links": [
+      {
+        "label": "visit CheezeChoice Website",
+        "href": "https://cheeze-choice.vercel.app/",
+        "external": true,
+        "placement": "top"
+      }
     ]
   },
   {
@@ -22,15 +30,16 @@
     "type": "Coding practice platform",
     "description": "A full-stack learning and interview-prep platform with 360+ DSA problems, SQL practice, interactive visualizers, and company-specific preparation.",
     "tags": ["Next.js", "TypeScript", "Supabase", "Gemini", "Monaco Editor"],
-    "cover": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=85",
+    "cover": "/assets/work/code365/HOME.png",
     "color": "#d8e6df",
-    "inlineImage": "/assets/work/code365.png",
+    "inlineImage": "/assets/work/code365/code365.png",
     "imageCaption": "A structured learning experience helps developers build skills and prepare for technical interviews.",
     "body": [
-      "Code 365 is a full-stack platform for developers learning data structures and algorithms, practicing SQL, and preparing for technical interviews. It brings together more than 360 coding problems, a SQL problem bank, daily challenges, flashcards, and structured study plans.",
-      "I approached the product as a complete learning loop: give people a clear next step, let them practice hands-on, and help them see their progress. The Monaco-based editor supports coding practice, while algorithm, Git, and SQL tools make concepts easier to explore through interaction.",
-      "Interview resources—including mock interviews, company-wise questions, and interview experiences—connect that practice to real hiring goals. Streaks, statistics, achievements, and rankings add ways to track momentum over time.",
-      "I built the platform with Next.js 14, TypeScript, Tailwind CSS, and Radix UI. Supabase provides authentication and the PostgreSQL database, with Gemini integration supporting AI features. The application is deployed on Vercel."
+      "Code 365 is a learning and interview-preparation platform for developers who want a more organized way to build practical skills. It brings data structures and algorithms, SQL, and technical interview resources into one place, so learners can move from studying a concept to practicing it without jumping between tools.",
+      "The problem library includes more than 360 data structures and algorithms questions, alongside a dedicated collection of SQL exercises. Daily challenges, flashcards, and structured study plans give learners several ways to keep a steady routine, revisit important ideas, and decide what to work on next.",
+      "Practice is built around an interactive editor powered by Monaco. Developers can work through problems directly in the platform, while visualizers and learning tools for algorithms, Git, and SQL help make abstract topics easier to understand. The goal was to support both deliberate study and hands-on experimentation in the same workflow.",
+      "Code 365 also connects practice to interview preparation. Mock interviews, company-specific questions, and interview experiences help learners focus their preparation around the roles and organizations they care about. Streaks, statistics, achievements, and rankings make progress visible and provide useful milestones along the way.",
+      "I built the application with Next.js 14, TypeScript, Tailwind CSS, and Radix UI. Supabase handles authentication and PostgreSQL data storage, while Gemini supports AI features. The platform is deployed on Vercel, bringing the learning experience together as a full-stack product."
     ],
     "links": [
       {
@@ -50,6 +59,48 @@
         "icon": "github",
         "placement": "top"
       }
+    ],
+    "content": [
+      {
+        "type": "heading",
+        "text": "A guided path from learning to practice"
+      },
+      {
+        "type": "paragraph",
+        "text": "Code 365 brings data structures and algorithms, SQL, and interview preparation into one learning environment. Its library of more than 360 DSA problems and dedicated SQL exercises gives developers a place to practice, while daily challenges, flashcards, and study plans help turn that practice into a steady routine."
+      },
+      {
+        "type": "image",
+        "src": "/assets/work/code365/code365.tech_dashboard-light.png",
+        "alt": "Code 365 learning dashboard with study shortcuts and progress statistics",
+        "caption": "The dashboard puts a learner’s next steps and progress in one place."
+      },
+      {
+        "type": "heading",
+        "text": "Learn by exploring concepts"
+      },
+      {
+        "type": "paragraph",
+        "text": "The platform pairs hands-on problem solving with tools that make concepts easier to explore. A Monaco-powered editor supports coding practice, and algorithm, Git, and SQL visualizers give learners an interactive way to work through ideas. Learning paths organize related topics into a sequence, helping users understand what to study next."
+      },
+      {
+        "type": "image",
+        "src": "/assets/work/code365/code365_learningpath.png",
+        "alt": "Code 365 learning path showing an Arrays and Strings module and its lessons",
+        "caption": "Structured modules break broad topics into focused lessons and practice."
+      },
+      {
+        "type": "heading",
+        "text": "Prepare with progress in view"
+      },
+      {
+        "type": "paragraph",
+        "text": "Code 365 connects regular practice to interview goals with mock interviews, company-specific questions, and interview experiences. Streaks, statistics, achievements, and rankings help learners review their momentum and see how their work adds up over time."
+      },
+      {
+        "type": "paragraph",
+        "text": "I built the application with Next.js 14, TypeScript, Tailwind CSS, and Radix UI. Supabase handles authentication and PostgreSQL data storage, while Gemini supports AI features. The platform is deployed on Vercel."
+      }
     ]
   },
   {
@@ -57,15 +108,23 @@
     "title": "Chatura Solutions",
     "year": "2023",
     "type": "Learning platform",
-    "description": "An online learning platform with courses, quizzes, and progress tracking.",
+    "description": "A career upskilling platform offering expert-led courses, mock interviews, and guidance to help learners move forward.",
     "tags": ["WordPress", "Elementor", "Calendly", "MS-LMS"],
-    "cover": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=1400&q=85",
+    "cover": "/assets/work/chaturasolutions/landing_.png",
     "color": "#d9d7e8",
-    "inlineImage": "/assets/work/img-3.png",
-    "imageCaption": "Course content is organized into a focused, welcoming learning space.",
+    "inlineImage": "/assets/work/chaturasolutions/educational-consult.png",
+    "imageCaption": "The landing page brings course discovery, consultation booking, and career guidance together.",
     "body": [
-      "Chatura Solutions needed a learning platform that made courses, quizzes, and progress easy to manage.",
-      "I shaped the site around clear course discovery and a practical content-management workflow for the team behind it."
+      "Chatura Solutions helps learners build skills and move toward their career goals through expert-led learning, mock interviews, and career guidance. I shaped the website around that promise, giving visitors clear ways to explore courses or book a consultation.",
+      "The site brings its learning offer and support together in one place, with course discovery, consultation booking, and resources easy to find. I built it with WordPress, Elementor, and the MS-LMS plugin, using Calendly to support consultation scheduling."
+    ],
+    "links": [
+      {
+        "label": "Visit Chatura Solutions",
+        "href": "https://www.chaturasolutions.com/",
+        "external": true,
+        "placement": "top"
+      }
     ]
   },
   {
@@ -75,10 +134,9 @@
     "type": "Learning platform",
     "description": "A training platform for NRIT Upskills Software Solutions with payments and course delivery.",
     "tags": ["WordPress", "Elementor", "MS-LMS", "Stripe"],
-    "cover": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1400&q=85",
+    "cover": "/assets/work/nritupskills/home.png",
     "color": "#f0d8c9",
-    "inlineImage": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1400&q=85",
-    "imageCaption": "A structured course catalog gives learners an inviting place to begin.",
+    "inlineImage": "/assets/work/nritupskills/home.png",
     "body": [
       "NRIT Upskills is an online learning experience built for course delivery, secure payments, and clear learner progress.",
       "The implementation connects the editorial flexibility of WordPress with LMS and Stripe workflows."
@@ -91,7 +149,7 @@
     "type": "Community website",
     "description": "An online presence for a church with event management and community engagement features.",
     "tags": ["WordPress", "Elementor", "SEO", "Google Analytics"],
-    "cover": "https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&w=1400&q=85",
+    "cover": "/assets/work/upperroomvijayawada.com_.png",
     "color": "#d8e6df",
     "inlineImage": "https://images.unsplash.com/photo-1478147427282-58a87a120781?auto=format&fit=crop&w=1400&q=85",
     "imageCaption": "The visual language makes room for community stories, events, and welcome.",
@@ -105,7 +163,7 @@
     "title": "Smart Mart",
     "year": "2023",
     "type": "Full-stack ecommerce platform",
-    "description": "A full-stack shopping experience with product discovery, cart and wishlist, order management, secure authentication, and payment integration.",
+    "description": "My first full-stack project: an ecommerce platform with product discovery, cart and wishlist, order management, authentication, and payment integration.",
     "tags": [
       "Angular",
       "Angular Material",
@@ -115,13 +173,13 @@
       "Payment Gateway",
       "Google Analytics"
     ],
-    "cover": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1800&q=85",
+    "cover": "/assets/work/smartMart.png",
     "color": "#d9d7e8",
-    "inlineImage": "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1400&q=85",
-    "imageCaption": "A clear checkout flow connects the product catalog, cart, and order process.",
+    "inlineImage": "/assets/work/smartmart/user/cart.png",
+    "imageCaption": "The cart brings selected products and order totals together before checkout.",
     "body": [
-      "Smart Mart is a full-stack ecommerce platform built to make the path from browsing to checkout straightforward. Shoppers can explore a product catalog, manage a cart and wishlist, place orders, and access generated invoices.",
-      "The project brings together the customer-facing storefront and the services behind it. The Angular and Angular Material frontend connects to a Spring Boot and Hibernate backend, with support for secure authentication and persistent product and order data."
+      "Smart Mart was my first full-stack project, built as a learning project rather than freelance work. I used it to understand how an ecommerce product works across the entire stack, from browsing a product catalog and managing a cart to placing an order and reviewing its status. It includes product search and category filtering, a wishlist, checkout, order history, and invoice generation.",
+      "Building the frontend and backend together gave me practical experience connecting user actions to application data. Angular and Angular Material power the storefront, while Spring Boot and Hibernate provide the backend services. The application uses a relational database, JWT-based authentication, and payment gateway integration, with admin screens for managing products and orders."
     ],
     "links": [
       {
@@ -130,44 +188,60 @@
         "external": true,
         "icon": "github",
         "placement": "top"
+      },
+      {
+        "label": "Read how I built it",
+        "href": "/blogs/building-smart-mart"
       }
     ],
     "content": [
       {
         "type": "heading",
-        "text": "A connected shopping journey"
+        "text": "My first end-to-end application"
       },
       {
         "type": "paragraph",
-        "text": "Smart Mart is designed around the everyday shopping journey: find a product, decide whether to save it or add it to the cart, and move through a clear order flow. The catalog, cart, wishlist, order history, and invoice generation support that journey from discovery through purchase."
+        "text": "Smart Mart was my first full-stack project, and a chance to build an ecommerce experience end to end. I brought product discovery, a wishlist, cart management, checkout, and order history into one application, following the shopper from the first browse through a completed order."
       },
       {
         "type": "image",
-        "src": "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1400&q=85",
-        "alt": "Produce arranged in a grocery store",
-        "caption": "Product discovery is the first step in the shopping flow."
+        "src": "/assets/work/smartmart/user/products.png",
+        "alt": "Smart Mart product catalog with category filters and product cards",
+        "caption": "The product catalog lets shoppers browse and filter available items."
       },
       {
         "type": "heading",
-        "text": "A full-stack commerce system"
+        "text": "Connecting the frontend and backend"
       },
       {
         "type": "paragraph",
-        "text": "I built the application as a full-stack system. Angular and Angular Material provide the responsive storefront, while Spring Boot and Hibernate handle backend services. The project supports MySQL or PostgreSQL and includes JWT-based authentication to protect customer and order workflows."
+        "text": "I used Angular and Angular Material for the storefront, then connected it to backend services built with Spring Boot and Hibernate. This helped me learn how a screen action—such as changing a cart quantity or submitting an order—needs to travel through the application and be reflected in persistent data. The project supports MySQL or PostgreSQL and uses JWT-based authentication for customer workflows."
       },
       {
         "type": "image",
-        "src": "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1400&q=85",
-        "alt": "A customer using a payment card at checkout",
-        "caption": "The checkout flow brings cart and payment into one clear path."
+        "src": "/assets/work/smartmart/user/cart.png",
+        "alt": "Smart Mart cart with item quantity controls, order summary, shipping address, and checkout button",
+        "caption": "The cart summarizes items and costs before the shopper checks out."
       },
       {
         "type": "heading",
-        "text": "Beyond checkout"
+        "text": "Customer and admin order flows"
       },
       {
         "type": "paragraph",
-        "text": "The purchase experience includes payment gateway integration, order processing, and invoice generation. A customer support chatbot adds another way to get help, while Google Analytics provides insight into traffic and customer behavior."
+        "text": "After checkout, customers can review their orders and see delivery status. On the admin side, order management provides a view of customer, product, quantity, and status details, with controls to update fulfillment progress. The project also explores payment integration and invoice generation."
+      },
+      {
+        "type": "image",
+        "src": "/assets/work/smartmart/user/Orders.png",
+        "alt": "Smart Mart order history showing an order, its details, and delivery status",
+        "caption": "Order history gives customers a view of their purchases and delivery progress."
+      },
+      {
+        "type": "image",
+        "src": "/assets/work/smartmart/admin/orders.png",
+        "alt": "Smart Mart admin orders table with customer, product, amount, quantity, and status columns",
+        "caption": "The admin order view supports reviewing orders and updating their status."
       },
       {
         "type": "paragraph",

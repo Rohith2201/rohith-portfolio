@@ -1,5 +1,148 @@
 [
   {
+    "slug": "how-i-approached-code-365",
+    "title": "How I Approached Code 365",
+    "category": "Build notes",
+    "date": "October 31, 2026",
+    "readTime": "5 min read",
+    "excerpt": "A walkthrough of the user and admin flows behind Code 365, from browser requests to data, analytics, and deployment logs.",
+    "cover": "/assets/work/code365/code365_user-flow.png",
+    "inlineImage": "/assets/work/code365/code365_user-flow.png",
+    "imageCaption": "The user flow traces a request from the browser through Code 365 services to the database.",
+    "body": [
+      "Building Code 365 meant thinking through two connected paths: how a learner uses the product and how the application is operated. These diagrams show the request path through the user-facing application, then the admin and monitoring connections that support the service."
+    ],
+    "content": [
+      {
+        "type": "heading",
+        "text": "User flow: from the browser to the database"
+      },
+      {
+        "type": "paragraph",
+        "text": "A learner starts in the browser and uses the React frontend to browse learning paths, solve problems, or check progress. The frontend sends requests to API routes hosted on Vercel. Authentication is handled through Supabase Auth, and authenticated requests can read or update the learner’s data in PostgreSQL through the database service."
+      },
+      {
+        "type": "image",
+        "src": "/assets/work/code365/code365_user-flow.png",
+        "alt": "Code 365 user flow diagram showing a learner using the React frontend, Vercel API routes, Supabase authentication, and PostgreSQL database",
+        "caption": "User flow: the frontend, API routes, authentication, and database work together to serve a learner’s request."
+      },
+      {
+        "type": "heading",
+        "text": "Admin flow: manage data and monitor the service"
+      },
+      {
+        "type": "paragraph",
+        "text": "The admin side has a separate route to PostgreSQL for database updates. The diagram also shows operational visibility around the application: Google Analytics receives event and query data, while Vercel provides page insights and deployment logs. This makes data management and service monitoring part of the overall system design."
+      },
+      {
+        "type": "image",
+        "src": "/assets/work/code365/code365_flow.png",
+        "alt": "Code 365 admin flow diagram showing admin database updates, Google Analytics events and query logs, and Vercel page insights and deployment logs",
+        "caption": "Admin flow: database updates and monitoring connect the platform to its operational tools."
+      },
+      {
+        "type": "paragraph",
+        "text": "Together, the diagrams show the two sides I considered while building Code 365: a direct path for learners to use the product, and clear connections for managing data and understanding how the service is running. The platform is available at code365.tech."
+      }
+    ]
+  },
+  {
+    "slug": "building-smart-mart",
+    "title": "Building Smart Mart: My First Full-Stack Project",
+    "category": "Build notes",
+    "date": "Novmeber 25, 2025",
+    "readTime": "4 min read",
+    "excerpt": "What I learned building an ecommerce application across the frontend, backend, database, and admin workflows.",
+    "cover": "/assets/work/smartmart/home.png",
+    "inlineImage": "/assets/work/smartmart/user/products.png",
+    "imageCaption": "The product catalog is the starting point for the Smart Mart shopping journey.",
+    "body": [
+      "Smart Mart was my first full-stack project, built as a learning project rather than freelance work. I wanted to understand how a complete ecommerce application fits together, from the interface shoppers use to the services and data behind it.",
+      "Working across the Angular frontend, Spring Boot backend, database, and admin screens taught me to think beyond individual pages. A product, cart, and order each need to stay connected as a customer moves through the shopping flow."
+    ],
+    "content": [
+      {
+        "type": "heading",
+        "text": "Start with the shopper’s journey"
+      },
+      {
+        "type": "paragraph",
+        "text": "I built the product experience around a familiar path: browse and filter the catalog, save items to a wishlist or add them to the cart, then review the order before checkout. The project also includes customer registration and login, order history, and invoice generation."
+      },
+      {
+        "type": "image",
+        "src": "/assets/work/smartmart/user/products.png",
+        "alt": "Smart Mart storefront showing a filterable product catalog",
+        "caption": "The catalog gives shoppers a place to search and explore products."
+      },
+      {
+        "type": "heading",
+        "text": "Learn how the pieces connect"
+      },
+      {
+        "type": "paragraph",
+        "text": "The frontend uses Angular and Angular Material, with Spring Boot and Hibernate handling backend services and persistence. Connecting those layers helped me understand how a shopper’s actions become authenticated requests and changes to product, cart, and order data. The application supports MySQL or PostgreSQL and uses JWT-based authentication."
+      },
+      {
+        "type": "image",
+        "src": "/assets/work/smartmart/user/cart.png",
+        "alt": "Smart Mart shopping cart with quantities, order summary, shipping address, and checkout",
+        "caption": "The cart brings selected products and order totals together before checkout."
+      },
+      {
+        "type": "heading",
+        "text": "Build for the customer and the admin"
+      },
+      {
+        "type": "paragraph",
+        "text": "An ecommerce flow continues after payment. Customers can review orders and follow their status, while admin views support product and order management. Building both sides helped me see how the same order data serves different needs across the application."
+      },
+      {
+        "type": "image",
+        "src": "/assets/work/smartmart/admin/orders.png",
+        "alt": "Smart Mart admin orders table showing customer, product, payment amount, quantity, and order status",
+        "caption": "The admin order view supports reviewing orders and updating fulfillment status."
+      },
+      {
+        "type": "paragraph",
+        "text": "Smart Mart was an important first step in my full-stack development journey. It gave me hands-on experience bringing a storefront, backend services, authentication, database persistence, checkout, and administration into one working project."
+      }
+    ]
+  },
+  {
+    "slug": "rag-search-quality",
+    "title": "Improving RAG search quality for AI applications",
+    "category": "AI systems",
+    "date": "October 3, 2024",
+    "readTime": "7 min read",
+    "excerpt": "A practical framework for better retrieval augmented generation: chunking, metadata, reranking, and evaluation.",
+    "cover": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=85",
+    "inlineImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=85",
+    "imageCaption": "Good retrieval gives a language model the right context at the right time.",
+    "body": [
+      "Most RAG problems are retrieval problems before they are generation problems. If the right source never reaches the context window, a stronger model will not reliably fix the answer.",
+      "Start with clean documents, useful metadata, and chunks that preserve meaning. Measure recall with a small set of questions from real users, then add hybrid search or reranking only when the evaluation shows a gap.",
+      "Finally, design for citation and correction. Let people inspect the source behind an answer, report a bad result, and improve the corpus over time."
+    ]
+  },
+  {
+    "slug": "ai-agents-in-production",
+    "title": "A practical guide to AI agents in production",
+    "category": "AI engineering",
+    "date": "September 12, 2024",
+    "readTime": "8 min read",
+    "excerpt": "How to design reliable AI agents with tools, guardrails, evaluation, and human control.",
+    "cover": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1800&q=85",
+    "inlineImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85",
+    "imageCaption": "Production agents need observable steps, not just fluent answers.",
+    "body": [
+      "AI agents are most useful when they complete a bounded workflow instead of pretending to be universal experts. Start with the user outcome, map the decisions the agent must make, and keep each tool call explicit.",
+      "Reliability comes from the system around the model: typed inputs, permission checks, retries, timeouts, structured outputs, and evaluations built from real tasks. A polished chat surface cannot compensate for invisible failure modes.",
+      "The best agent UX keeps people informed. Show what the agent is doing, make approvals meaningful, and provide a clear recovery path when a tool or model is uncertain."
+    ]
+  },
+  {
     "slug": "building-in-public",
     "title": "The quiet power of building in public",
     "category": "Notes",
@@ -45,120 +188,6 @@
       "Good interfaces rarely announce themselves. They reduce the amount of thinking required to move through a task, and they make the next useful action feel natural.",
       "Start with hierarchy. If everything is loud, nothing is clear. Give the primary action space, keep supporting information close to the thing it explains, and let typography do more of the work than decoration.",
       "Then test the edges: empty states, long names, slow networks, keyboard navigation, and the moment after an action succeeds."
-    ]
-  },
-  {
-    "slug": "ai-agents-in-production",
-    "title": "A practical guide to AI agents in production",
-    "category": "AI engineering",
-    "date": "September 12, 2024",
-    "readTime": "8 min read",
-    "excerpt": "How to design reliable AI agents with tools, guardrails, evaluation, and human control.",
-    "cover": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1800&q=85",
-    "inlineImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85",
-    "imageCaption": "Production agents need observable steps, not just fluent answers.",
-    "body": [
-      "AI agents are most useful when they complete a bounded workflow instead of pretending to be universal experts. Start with the user outcome, map the decisions the agent must make, and keep each tool call explicit.",
-      "Reliability comes from the system around the model: typed inputs, permission checks, retries, timeouts, structured outputs, and evaluations built from real tasks. A polished chat surface cannot compensate for invisible failure modes.",
-      "The best agent UX keeps people informed. Show what the agent is doing, make approvals meaningful, and provide a clear recovery path when a tool or model is uncertain."
-    ]
-  },
-  {
-    "slug": "rag-search-quality",
-    "title": "Improving RAG search quality for AI applications",
-    "category": "AI systems",
-    "date": "October 3, 2024",
-    "readTime": "7 min read",
-    "excerpt": "A practical framework for better retrieval augmented generation: chunking, metadata, reranking, and evaluation.",
-    "cover": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=85",
-    "inlineImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=85",
-    "imageCaption": "Good retrieval gives a language model the right context at the right time.",
-    "body": [
-      "Most RAG problems are retrieval problems before they are generation problems. If the right source never reaches the context window, a stronger model will not reliably fix the answer.",
-      "Start with clean documents, useful metadata, and chunks that preserve meaning. Measure recall with a small set of questions from real users, then add hybrid search or reranking only when the evaluation shows a gap.",
-      "Finally, design for citation and correction. Let people inspect the source behind an answer, report a bad result, and improve the corpus over time."
-    ]
-  },
-    {
-    "slug": "how-i-approached-code-365",
-    "title": "Designing Code 365 Around the Learner Journey",
-    "category": "Build notes",
-    "date": "October 31, 2026",
-    "readTime": "5 min read",
-    "excerpt": "How I organized Code 365 into a clear progression from learning fundamentals to practicing skills and preparing for interviews.",
-    "cover": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=85",
-    "inlineImage": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=85",
-    "imageCaption": "The product structure connects learning paths, practice, and interview preparation.",
-    "body": [
-      "Code 365 has grown into a broad learning and interview preparation platform. Its sitemap lists more than 150 pages, 500 problems, 20 companies, and 30 topics. At this scale, the central product question is not only what to offer, but how to help each learner decide where to begin and what to do next."
-    ],
-    "content": [
-      {
-        "type": "heading",
-        "text": "Start with a clear progression"
-      },
-      {
-        "type": "paragraph",
-        "text": "I organized the learning experience around three stages: Foundations, Problem Solving, and Interview Mastery. Foundations covers the building blocks, including arrays, strings, linked lists, stacks, queues, and basic sorting. Problem Solving builds toward trees, graphs, dynamic programming, and other advanced techniques. Interview Mastery then focuses on system design and challenging interview topics."
-      },
-      {
-        "type": "paragraph",
-        "text": "This progression gives the problem catalog context. Learners can work from fundamentals toward more advanced material instead of facing a flat list of topics with no suggested order."
-      },
-      {
-        "type": "heading",
-        "text": "Make practice part of the learning path"
-      },
-      {
-        "type": "paragraph",
-        "text": "A learning path becomes useful when it leads directly to practice. Code 365 connects its curricula to a problem library, a daily challenge, SQL problems, and an online code editor. The algorithm visualizer gives learners a way to inspect how algorithms work, while the Git visualizer turns commands into an interactive exercise."
-      },
-      {
-        "type": "paragraph",
-        "text": "The My Problems area and progress features help learners keep track of what they have completed. Together, these tools create a loop: choose a topic, learn the idea, apply it, and see what remains."
-      },
-      {
-        "type": "image",
-        "src": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=85",
-        "alt": "Learners working together around a laptop.",
-        "caption": "The product structure connects learning paths, practice, and interview preparation."
-      },
-      {
-        "type": "heading",
-        "text": "Connect practice to interview preparation"
-      },
-      {
-        "type": "paragraph",
-        "text": "Interview preparation is integrated into the same experience. Company pages organize questions around employers such as Google, Microsoft, Amazon, Meta, Apple, Netflix, and IBM. Interview guides and experiences provide context, while mock and peer interviews offer ways to rehearse."
-      },
-      {
-        "type": "paragraph",
-        "text": "This structure links general skill building to a concrete goal. A learner can move from a topic or problem toward the kind of preparation they need for a particular interview."
-      },
-      {
-        "type": "heading",
-        "text": "Support consistency and long-term progress"
-      },
-      {
-        "type": "paragraph",
-        "text": "Flashcards, study plans, roadmaps, and learning resources support work between problem sessions. Profiles, statistics, achievements, and rankings make progress visible, while events and community features give learners more ways to participate."
-      },
-      {
-        "type": "paragraph",
-        "text": "These parts matter because preparation takes time. The product needs to remain useful after the first visit, helping learners return, continue a plan, and understand how their effort is adding up."
-      },
-      {
-        "type": "heading",
-        "text": "Use the sitemap as a product map"
-      },
-      {
-        "type": "paragraph",
-        "text": "I treat the sitemap as more than a list of routes. It makes the platform structure explicit and shows whether the main journey is understandable across learning paths, practice, interview resources, and progress. As the product grows, that map helps keep new features connected to the experience rather than adding them as isolated destinations."
-      },
-      {
-        "type": "paragraph",
-        "text": "That is the approach behind Code 365: organize the breadth around a learner goal, connect each stage to a useful action, and make progress easier to follow. The current product is available at code365.tech."
-      }
     ]
   }
 ]

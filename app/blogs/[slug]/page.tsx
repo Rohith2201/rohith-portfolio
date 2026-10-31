@@ -61,7 +61,7 @@ export default async function BlogPage({
           <img
             src={post.cover}
             alt={`${post.title} cover`}
-            className="aspect-[2/1] w-full rounded-sm object-cover"
+            className={`aspect-[2/1] w-full rounded-sm ${post.slug === "how-i-approached-code-365" ? "bg-[#f5f5f5] object-contain" : "object-cover"}`}
           />
           <figcaption className="mt-3 font-mono text-center text-xs uppercase tracking-[0.12em] text-[#17221d]/50">
             {post.title} — cover image
@@ -95,7 +95,7 @@ export default async function BlogPage({
                       src={block.src}
                       alt={block.alt}
                       loading="lazy"
-                      className="aspect-[1.5/1] w-full rounded-sm object-cover"
+                      className={`aspect-[1.5/1] w-full rounded-sm ${post.slug === "how-i-approached-code-365" ? "bg-[#f5f5f5] object-contain" : "object-cover"}`}
                     />
                     <figcaption className="mt-3 font-mono text-center text-xs uppercase tracking-[0.12em] text-[#17221d]/50">
                       {block.caption}

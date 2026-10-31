@@ -58,7 +58,7 @@ export default function WorksPage() {
               <img
                 src={project.cover}
                 alt={`${project.title} project preview`}
-                className="aspect-[1.5/1] w-full rounded-sm object-cover grayscale transition-all duration-500 hover:grayscale-0"
+                className={`aspect-[1.5/1] w-full rounded-sm grayscale transition-all duration-500 hover:grayscale-0 ${project.slug === "code-365" ? "bg-[#d8e6df] object-contain" : project.slug === "smart-mart" ? "bg-white object-contain" : "object-cover"}`}
               />
             </a>
           ))}
