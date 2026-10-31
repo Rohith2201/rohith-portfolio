@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, ArrowUpRight, Clock } from 'lucide-react'
+import { ArrowUpRight, Clock } from 'lucide-react'
 import { blogPosts } from '@/lib/content'
 import { SiteCta } from '@/components/site-cta'
 import { Breadcrumbs } from '@/components/breadcrumbs'
@@ -25,7 +25,12 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
       <header className="border-b border-[#17221d]/10">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
           <a href="/" className="font-mono text-sm font-semibold tracking-tight">rohith<span className="text-[#e25b38]">.</span>xyz</a>
-          <a href="/" className="inline-flex items-center gap-2 text-sm hover:text-[#e25b38]"><ArrowLeft size={16} /> Back home</a>
+          <nav aria-label="Main navigation" className="flex items-center gap-5 font-mono text-[11px] uppercase tracking-[0.12em]">
+            <a href="/" className="transition-colors hover:text-[#e25b38]">Home</a>
+            <a href="/works" className="transition-colors hover:text-[#e25b38]">Works</a>
+            <a href="/blogs" className="text-[#e25b38]">Writing</a>
+            <a href="/#contact" className="transition-colors hover:text-[#e25b38]">Contact</a>
+          </nav>
         </div>
       </header>
       <article>
