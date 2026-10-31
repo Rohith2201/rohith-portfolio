@@ -6,12 +6,9 @@ import {
   Check,
   Mail,
   MapPin,
-  Menu,
   Send,
   Sparkles,
-  X,
 } from 'lucide-react'
-import { ThemeToggle } from '@/components/theme-toggle'
 import projects from '@/lib/projects.json'
 
 const works = projects.slice(0, 3).map((project, index) => ({
@@ -57,7 +54,6 @@ const posts = [
 ]
 
 export default function Page() {
-  const [menuOpen, setMenuOpen] = useState(false)
   const [sent, setSent] = useState(false)
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -67,18 +63,6 @@ export default function Page() {
 
   return (
     <main className="portfolio-shell min-h-screen overflow-hidden bg-white text-[#17221d]">
-      <header className="fixed left-0 right-0 top-0 z-50 border-b border-[#17221d]/10 bg-white/90 backdrop-blur-md">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
-          <a href="#top" className="font-mono text-sm font-semibold tracking-tight">rohith<span className="text-[#e25b38]">.</span>xyz</a>
-          <nav className={`${menuOpen ? 'absolute left-0 right-0 top-20 flex border-b border-[#17221d]/10 bg-white p-6' : 'hidden'} flex-col gap-5 text-sm md:static md:flex md:flex-row md:items-center md:border-0 md:bg-transparent md:p-0`}>
-            {['About', 'Work', 'Writing', 'Contact'].map((item) => <a key={item} href={item === 'Writing' ? '/blogs' : `#${item.toLowerCase()}`} onClick={() => setMenuOpen(false)} className="transition-colors hover:text-[#e25b38]">{item}</a>)}
-          </nav>
-          <div className="hidden items-center gap-4 md:flex"><a href="#contact" className="inline-flex items-center gap-2 text-sm">Let&apos;s talk <ArrowUpRight size={16} /></a> <ThemeToggle />
-</div>
-                    <button aria-label={menuOpen ? 'Close menu' : 'Open menu'} className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={21} /> : <Menu size={21} />}</button>
-        </div>
-      </header>
-
       <section id="top" className="mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-40 lg:grid-cols-[1.15fr_.85fr] lg:items-end lg:px-10 lg:pb-32 lg:pt-52">
         <div>
           <div className="mb-8 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-[#e25b38]"><span className="size-2 rounded-full bg-[#e25b38]" /> Available for select projects</div>

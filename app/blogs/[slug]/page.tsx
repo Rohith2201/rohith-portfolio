@@ -22,17 +22,6 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
 
   return (
     <main className="site-shell min-h-screen bg-[#f7f7f2] text-[#17221d]">
-      <header className="border-b border-[#17221d]/10">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
-          <a href="/" className="font-mono text-sm font-semibold tracking-tight">rohith<span className="text-[#e25b38]">.</span>xyz</a>
-          <nav aria-label="Main navigation" className="flex items-center gap-5 font-mono text-[11px] uppercase tracking-[0.12em]">
-            <a href="/" className="transition-colors hover:text-[#e25b38]">Home</a>
-            <a href="/works" className="transition-colors hover:text-[#e25b38]">Works</a>
-            <a href="/blogs" className="text-[#e25b38]">Writing</a>
-            <a href="/#contact" className="transition-colors hover:text-[#e25b38]">Contact</a>
-          </nav>
-        </div>
-      </header>
       <article>
         <header className="mx-auto max-w-5xl px-6 pb-16 pt-24 lg:px-10 lg:pb-20 lg:pt-32"><Breadcrumbs current={post.title} />
           <div className="flex flex-wrap items-center gap-4 font-mono text-xs uppercase tracking-[0.16em] text-[#e25b38]"><span>{post.category}</span><span className="text-[#17221d]/30">/</span><span className="text-[#17221d]/50">{post.date}</span><span className="inline-flex items-center gap-1 text-[#17221d]/50"><Clock size={13} /> {post.readTime}</span></div>
