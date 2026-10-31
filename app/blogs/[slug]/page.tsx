@@ -32,7 +32,7 @@ export default async function BlogPage({
   if (!post) notFound();
 
   return (
-    <main className="site-shell min-h-screen bg-[#f7f7f2] text-[#17221d]">
+    <main className="site-shell min-h-screen bg-white text-[#17221d]">
       <article>
         <header className="mx-auto max-w-7xl px-6 pb-16 pt-24 lg:px-10 lg:pb-20 lg:pt-32">
           <Breadcrumbs

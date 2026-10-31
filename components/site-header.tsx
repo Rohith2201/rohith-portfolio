@@ -3,28 +3,39 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const links = [
   { label: "About", href: "/#about" },
   { label: "Works", href: "/works" },
+  { label: "Code", href: "/code" },
   { label: "Blogs", href: "/blogs" },
+  { label: "Services", href: "/services" },
+  { label: "Testimonials", href: "/testimonials" },
 ];
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   function isActive(href: string) {
     if (href === "/works") return pathname.startsWith("/works");
     if (href === "/blogs") return pathname.startsWith("/blogs");
+    if (href === "/code") return pathname.startsWith("/code");
+    if (href === "/services") return pathname.startsWith("/services");
+    if (href === "/testimonials") return pathname.startsWith("/testimonials");
     return false;
   }
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-10">
-      <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-[#17221d]/10 bg-[#f7f7f2]/90 px-4 py-3 shadow-sm backdrop-blur-xl dark:border-white/10 dark:bg-[#111614]/90 sm:px-6">
+      <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-[#17221d]/10 bg-white/90 px-4 py-3 shadow-sm backdrop-blur-xl dark:border-white/10 dark:bg-[#111614]/90 sm:px-6">
         <Link
           href="/"
           aria-label="Rohith Juluru, home"
@@ -37,10 +48,10 @@ export function SiteHeader() {
         <nav
           id="main-navigation"
           aria-label="Main navigation"
-          className={`${menuOpen ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0"} absolute left-4 right-4 top-[calc(100%+0.5rem)] flex flex-col gap-1 rounded-3xl border border-[#17221d]/10 bg-[#f7f7f2] p-3 shadow-lg transition duration-200 dark:border-white/10 dark:bg-[#111614] md:visible md:static md:translate-y-0 md:flex md:flex-row md:items-center md:gap-1 md:border-0 md:bg-transparent md:p-0 md:opacity-100 md:shadow-none md:dark:bg-transparent`}
+          className={`${menuOpen ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0"} absolute left-4 right-4 top-[calc(100%+0.5rem)] flex flex-col gap-1 rounded-3xl border border-[#17221d]/10 bg-white p-3 shadow-lg transition duration-200 dark:border-white/10 dark:bg-[#111614] md:visible md:static md:translate-y-0 md:flex md:flex-row md:items-center md:gap-1 md:border-0 md:bg-transparent md:p-0 md:opacity-100 md:shadow-none md:dark:bg-transparent`}
         >
           {links.map((link) => {
-            const active = isActive(link.href);
+            const active = hasMounted && isActive(link.href);
 
             return (
               <Link

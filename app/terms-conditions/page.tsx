@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function TermsConditionsPage() {
   return (
-    <main className="min-h-screen bg-[#f7f7f2] px-6 py-10 text-[#17221d] lg:px-10">
+    <main className="site-shell min-h-screen bg-white px-6 py-10 text-[#17221d] lg:px-10">
       <div className="mx-auto max-w-3xl">
         <Breadcrumbs current="Terms & conditions" />
         <article className="py-24">

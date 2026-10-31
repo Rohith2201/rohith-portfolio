@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function BlogsPage() {
   return (
-    <main className="site-shell min-h-screen bg-[#f7f7f2] text-[#17221d]">
+    <main className="site-shell min-h-screen bg-white text-[#17221d]">
       <header>
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
           <a

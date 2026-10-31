@@ -4,7 +4,7 @@ import { SiteCta } from "@/components/site-cta";
 
 export default function WorksPage() {
   return (
-    <main className="site-shell min-h-screen bg-[#f7f7f2] text-[#17221d]">
+    <main className="site-shell min-h-screen bg-white text-[#17221d]">
       <section className="mx-auto max-w-7xl px-6 pb-24 pt-24 lg:px-10 lg:pb-32 lg:pt-32">
         <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#e25b38]">
           / Selected work
